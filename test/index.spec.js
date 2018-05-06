@@ -2,7 +2,7 @@
 
 import chai from 'chai'
 import FonugCharacterGenerator from './../src/index'
-import Character from './../src/character'
+import Character from './../src/model/character'
 
 chai.expect()
 

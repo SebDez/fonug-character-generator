@@ -1,5 +1,6 @@
 import * as config from './../package.json'
-import Character from './../src/character'
+import CharacterGenerator from './services/characterGenerator'
+import ContentProvider from './services/contentProvider'
 
 /**
  * The class defining the character generator
@@ -11,6 +12,7 @@ import Character from './../src/character'
 export default class FonugCharacterGenerator {
   constructor () {
     this.version = config.version
+    this.contentProvider = new ContentProvider()
   }
 
   /**
@@ -19,10 +21,19 @@ export default class FonugCharacterGenerator {
    * @memberof FonugGenerator
    */
   generateCharacter () {
-    const character = new Character()
-
-    return Object.assign({}, character, {
+    const generator = new CharacterGenerator(this.getGeneratorContent())
+    const character = generator.generateCharacter()
+    return Object.assign({}, character.toJSON(), {
       version: this.version
     })
+  }
+
+  getGeneratorContent () {
+    return {
+      main: {
+        civilization: this.contentProvider.default(),
+        age: this.contentProvider.default()
+      }
+    }
   }
 }

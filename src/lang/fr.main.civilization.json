@@ -1,0 +1,182 @@
+{
+    "human": {
+        "male": "Humain",
+        "female": "Humaine"
+    },
+    "dwarf": {
+        "male": "Nain",
+        "female": "Naine"
+    },
+    "elf": {
+        "male": "Elfe",
+        "female": "Elfe"
+    },
+    "duergar": {
+        "male": "Duergar",
+        "female": "Duergar"
+    },
+    "drow": {
+        "male": "Drow",
+        "female": "Drow"
+    },
+    "woodelves": {
+        "male": "Elfe Sylvain",
+        "female": "Elfe Sylvain"
+    },
+    "khajiit": {
+        "male": "Khajiit",
+        "female": "Khajiit"
+    },
+    "orc": {
+        "male": "Orc",
+        "female": "Orcesse"
+    },
+    "goblin": {
+        "male": "Gobelin",
+        "female": "Gobeline"
+    },
+    "urukhai": {
+        "male": "Uruk-hai",
+        "female": "Uruk-hai"
+    },
+    "lizardmen": {
+        "male": "Homme-Lézard",
+        "female": "Femme-Lézard"
+    },
+    "gnome": {
+        "male": "Gnome",
+        "female": "Gnome"
+    },
+    "hobbit": {
+        "male": "Hobbit",
+        "female": "Hobbit"
+    },
+    "halfling": {
+        "male": "Halfelin",
+        "female": "Halfeline"
+    },
+    "troll": {
+        "male": "Troll",
+        "female": "Troll"
+    },
+    "ogre": {
+        "male": "Ogre",
+        "female": "Ogresse"
+    },
+    "giant": {
+        "male": "Géant",
+        "female": "Géante"
+    },
+    "ghost": {
+        "male": "Fantôme",
+        "female": "Fantôme"
+    },
+    "daemon": {
+        "male": "Démon",
+        "female": "Démone"
+    },
+    "angel": {
+        "male": "Ange",
+        "female": "Ange"
+    },
+    "fairy": {
+        "male": "Fée",
+        "female": "Fée"
+    },
+    "ent": {
+        "male": "Ent",
+        "female": "Ent"
+    },
+    "sylvari": {
+        "male": "Sylvari",
+        "female": "Sylvari"
+    },
+    "beastmen": {
+        "male": "Homme-Bête",
+        "female": "Femme-Bête"
+    },
+    "lycan": {
+        "male": "Lycan",
+        "female": "Lycan"
+    },
+    "vampire": {
+        "male": "Vampire",
+        "female": "Vampire"
+    },
+    "gargoyle": {
+        "male": "Gargouille",
+        "female": "Gargouille"
+    },
+    "qunari": {
+        "male": "Qunari",
+        "female": "Qunari"
+    },
+    "skaven": {
+        "male": "Skaven",
+        "female": "Skaven"
+    },
+    "amphibian": {
+        "male": "Amphibien",
+        "female": "Amphibienne"
+    },
+    "minotaur": {
+        "male": "Minotaure",
+        "female": "Minotaure"
+    },
+    "centaur": {
+        "male": "Centaure",
+        "female": "Centaure"
+    },
+    "djinn": {
+        "male": "Djinn",
+        "female": "Djinn"
+    },
+    "dryad": {
+        "male": "Dryade",
+        "female": "Dryade"
+    },
+    "dragonborn": {
+        "male": "Fils du Dragon",
+        "female": "Fille du Dragon"
+    },
+    "faun": {
+        "male": "Faune",
+        "female": "Faune"
+    },
+    "ghoul": {
+        "male": "Goule",
+        "female": "Goule"
+    },
+    "minoboar": {
+        "male": "Minoboar",
+        "female": "Minoboar"
+    },
+    "siren": {
+        "male": "Sirène",
+        "female": "Sirène"
+    },
+    "naga": {
+        "male": "Naga",
+        "female": "Naga"
+    },
+    "mermaid": {
+        "male": "Ondine",
+        "female": "Ondine"
+    },
+    "halfinsect": {
+        "male": "Homme-Insect",
+        "female": "Femme-Insect"
+    },
+    "golem": {
+        "male": "Golem",
+        "female": "Golem"
+    },
+    "goauld": {
+        "male": "Goa'Uld",
+        "female": "Goa'Uld"
+    },
+    "cyclop": {
+        "male": "Cyclope",
+        "female": "Cyclope"
+    }
+}

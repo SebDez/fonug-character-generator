@@ -1,0 +1,20 @@
+[
+    {
+        "i18nkey": "child"
+    },
+    {
+        "i18nkey": "adolescent"
+    },
+    {
+        "i18nkey": "youngadult"
+    },
+    {
+        "i18nkey": "adult"
+    },
+    {
+        "i18nkey": "old"
+    },
+    {
+        "i18nkey": "veryold"
+    }
+]
