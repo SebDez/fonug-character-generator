@@ -29,7 +29,8 @@ export default class ContentObject {
     return {
       i18nKey: this.i18nKey,
       i18nFullKey: this.i18nFullKey,
-      i18nValue: this.i18nValue
+      i18nValue: this.i18nValue,
+      percentage: this.percentage
     }
   }
 }

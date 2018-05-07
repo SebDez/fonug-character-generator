@@ -17,8 +17,8 @@ describe('NPC Generator', () => {
 
   describe('generateCharacter', () => {
     let character
-    before(() => {
-      character = generator.generateCharacter()
+    before(async () => {
+      character = await generator.generateCharacter()
     })
 
     it('should return an object', () => {

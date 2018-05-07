@@ -27,7 +27,7 @@ export default class Character {
       .reduce((obj, mod) => {
         const moduleObject = GENERATOR_CATEGORIES[mod].reduce((modObj, category) => {
           modObj[category] = this[mod] && this[mod][category] && this[mod][category].toJSON ? this[mod][category].toJSON() : void (0)
-          return obj
+          return modObj
         }, {})
         obj[mod] = moduleObject
         return obj

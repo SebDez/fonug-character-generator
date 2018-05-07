@@ -1,21 +1,21 @@
 [
     {
-        "i18nkey": "inexperienced",
+        "i18nKey": "inexperienced",
         "weight": 0.2,
         "percentage": 30
     },
     {
-        "i18nkey": "noob",
+        "i18nKey": "noob",
         "weight": 0.4,
         "percentage": 55
     },
     {
-        "i18nkey": "experimented",
+        "i18nKey": "experimented",
         "weight": 0.4,
         "percentage": 75
     },
     {
-        "i18nkey": "excellent",
+        "i18nKey": "excellent",
         "weight": 0.2,
         "percentage": 90
     }

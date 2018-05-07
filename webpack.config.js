@@ -1,24 +1,26 @@
-/* global __dirname, require, module*/
+/* global __dirname, require, module */
+require('babel-core/register')
+require('babel-polyfill')
 
-const webpack = require('webpack');
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-const path = require('path');
-const env = require('yargs').argv.env; // use --env with webpack 2
-const pkg = require('./package.json');
+const webpack = require('webpack')
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const path = require('path')
+const env = require('yargs').argv.env // use --env with webpack 2
+const pkg = require('./package.json')
 
-let libraryName = pkg.name;
+let libraryName = pkg.name
 
-let plugins = [], outputFile;
+let plugins = [], outputFile
 
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
-  outputFile = libraryName + '.min.js';
+  plugins.push(new UglifyJsPlugin({ minimize: true }))
+  outputFile = libraryName + '.min.js'
 } else {
-  outputFile = libraryName + '.js';
+  outputFile = libraryName + '.js'
 }
 
 const config = {
-  entry: __dirname + '/src/index.js',
+  entry: ['babel-polyfill', __dirname + '/src/index.js'],
   devtool: 'source-map',
   output: {
     path: __dirname + '/lib',
@@ -46,6 +48,6 @@ const config = {
     extensions: ['.json', '.js']
   },
   plugins: plugins
-};
+}
 
-module.exports = config;
+module.exports = config

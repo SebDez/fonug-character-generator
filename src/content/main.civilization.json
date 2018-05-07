@@ -1,137 +1,137 @@
 [
     {
-        "i18nkey": "human"
+        "i18nKey": "human"
     },
     {
-        "i18nkey": "dwarf"
+        "i18nKey": "dwarf"
     },
     {
-        "i18nkey": "elf"
+        "i18nKey": "elf"
     },
     {
-        "i18nkey": "duergar"
+        "i18nKey": "duergar"
     },
     {
-        "i18nkey": "drow"
+        "i18nKey": "drow"
     },
     {
-        "i18nkey": "woodelves"
+        "i18nKey": "woodelves"
     },
     {
-        "i18nkey": "khajiit"
+        "i18nKey": "khajiit"
     },
     {
-        "i18nkey": "orc"
+        "i18nKey": "orc"
     },
     {
-        "i18nkey": "goblin"
+        "i18nKey": "goblin"
     },
     {
-        "i18nkey": "urukhai"
+        "i18nKey": "urukhai"
     },
     {
-        "i18nkey": "lizardmen"
+        "i18nKey": "lizardmen"
     },
     {
-        "i18nkey": "gnome"
+        "i18nKey": "gnome"
     },
     {
-        "i18nkey": "hobbit"
+        "i18nKey": "hobbit"
     },
     {
-        "i18nkey": "halfling"
+        "i18nKey": "halfling"
     },
     {
-        "i18nkey": "troll"
+        "i18nKey": "troll"
     },
     {
-        "i18nkey": "ogre"
+        "i18nKey": "ogre"
     },
     {
-        "i18nkey": "giant"
+        "i18nKey": "giant"
     },
     {
-        "i18nkey": "ghost"
+        "i18nKey": "ghost"
     },
     {
-        "i18nkey": "daemon"
+        "i18nKey": "daemon"
     },
     {
-        "i18nkey": "angel"
+        "i18nKey": "angel"
     },
     {
-        "i18nkey": "fairy"
+        "i18nKey": "fairy"
     },
     {
-        "i18nkey": "ent"
+        "i18nKey": "ent"
     },
     {
-        "i18nkey": "sylvari"
+        "i18nKey": "sylvari"
     },
     {
-        "i18nkey": "beastmen"
+        "i18nKey": "beastmen"
     },
     {
-        "i18nkey": "lycan"
+        "i18nKey": "lycan"
     },
     {
-        "i18nkey": "vampire"
+        "i18nKey": "vampire"
     },
     {
-        "i18nkey": "gargoyle"
+        "i18nKey": "gargoyle"
     },
     {
-        "i18nkey": "qunari"
+        "i18nKey": "qunari"
     },
     {
-        "i18nkey": "skaven"
+        "i18nKey": "skaven"
     },
     {
-        "i18nkey": "amphibian"
+        "i18nKey": "amphibian"
     },
     {
-        "i18nkey": "minotaur"
+        "i18nKey": "minotaur"
     },
     {
-        "i18nkey": "centaur"
+        "i18nKey": "centaur"
     },
     {
-        "i18nkey": "djinn"
+        "i18nKey": "djinn"
     },
     {
-        "i18nkey": "dryad"
+        "i18nKey": "dryad"
     },
     {
-        "i18nkey": "dragonborn"
+        "i18nKey": "dragonborn"
     },
     {
-        "i18nkey": "faun"
+        "i18nKey": "faun"
     },
     {
-        "i18nkey": "ghoul"
+        "i18nKey": "ghoul"
     },
     {
-        "i18nkey": "minoboar"
+        "i18nKey": "minoboar"
     },
     {
-        "i18nkey": "siren"
+        "i18nKey": "siren"
     },
     {
-        "i18nkey": "naga"
+        "i18nKey": "naga"
     },
     {
-        "i18nkey": "mermaid"
+        "i18nKey": "mermaid"
     },
     {
-        "i18nkey": "halfinsect"
+        "i18nKey": "halfinsect"
     },
     {
-        "i18nkey": "golem"
+        "i18nKey": "golem"
     },
     {
-        "i18nkey": "goauld"
+        "i18nKey": "goauld"
     },
     {
-        "i18nkey": "cyclop"
+        "i18nKey": "cyclop"
     }
 ]
