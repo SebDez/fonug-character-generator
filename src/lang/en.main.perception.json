@@ -1,0 +1,18 @@
+{
+    "inattentive": {
+        "male": "Inattentive",
+        "female": "Inattentive"
+    },
+    "unobservant": {
+        "male": "Unobservant",
+        "female": "Unobservant"
+    },
+    "attentive": {
+        "male": "Attentive",
+        "female": "Attentive"
+    },
+    "veryattentive": {
+        "male": "Very attentive",
+        "female": "Very attentive"
+    }
+}

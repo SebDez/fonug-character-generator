@@ -1,0 +1,22 @@
+[
+    {
+        "i18nKey": "inattentive",
+        "weight": 0.2,
+        "percentage": 30
+    },
+    {
+        "i18nKey": "unobservant",
+        "weight": 0.4,
+        "percentage": 55
+    },
+    {
+        "i18nKey": "attentive",
+        "weight": 0.4,
+        "percentage": 75
+    },
+    {
+        "i18nKey": "veryattentive",
+        "weight": 0.2,
+        "percentage": 90
+    }
+]

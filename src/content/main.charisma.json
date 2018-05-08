@@ -1,0 +1,22 @@
+[
+    {
+        "i18nKey": "nopresence",
+        "weight": 0.2,
+        "percentage": 30
+    },
+    {
+        "i18nKey": "uncharismatic",
+        "weight": 0.4,
+        "percentage": 55
+    },
+    {
+        "i18nKey": "charismatic",
+        "weight": 0.4,
+        "percentage": 75
+    },
+    {
+        "i18nKey": "verycharismatic",
+        "weight": 0.2,
+        "percentage": 90
+    }
+]

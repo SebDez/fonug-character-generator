@@ -1,0 +1,18 @@
+{
+    "ugly": {
+        "male": "Ugly",
+        "female": "Ugly"
+    },
+    "notattractive": {
+        "male": "Few seductive",
+        "female": "Few seductive"
+    },
+    "nice": {
+        "male": "Pretty nice",
+        "female": "Pretty nice"
+    },
+    "beautiful": {
+        "male": "Very beautiful",
+        "female": "Very beautiful"
+    }
+}

@@ -19,6 +19,7 @@ describe('NPC Generator', () => {
     let character
     before(async () => {
       character = await generator.generateCharacter()
+      // generator.generateCharacter().then(null, err => console.log(JSON.stringify(err)))
     })
 
     it('should return an object', () => {

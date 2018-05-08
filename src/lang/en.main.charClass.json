@@ -1,0 +1,78 @@
+{
+    "barbarian": {
+        "male": "Barbarian",
+        "female": "Barbarian"
+    },
+    "bard": {
+        "male": "Bard",
+        "female": "Bard"
+    },
+    "druid": {
+        "male": "Druid",
+        "female": "Druid"
+    },
+    "witcher": {
+        "male": "Witcher",
+        "female": "Witcher"
+    },
+    "warrior": {
+        "male": "Warrior",
+        "female": "Warrior"
+    },
+    "magician": {
+        "male": "Magician",
+        "female": "Magician"
+    },
+    "monk": {
+        "male": "Monk",
+        "female": "Monk"
+    },
+    "paladin": {
+        "male": "Paladin",
+        "female": "Paladin"
+    },
+    "priest": {
+        "male": "Priest",
+        "female": "Priest"
+    },
+    "tramp": {
+        "male": "Tramp",
+        "female": "Tramp"
+    },
+    "necromancer": {
+        "male": "Necromancer",
+        "female": "Necromancer"
+    },
+    "alchemist": {
+        "male": "Alchemist",
+        "female": "Alchemist"
+    },
+    "knight": {
+        "male": "Knight",
+        "female": "Knight"
+    },
+    "soothsayer": {
+        "male": "Soothsayer",
+        "female": "Soothsayer"
+    },
+    "witch": {
+        "male": "Witch",
+        "female": "Witch"
+    },
+    "ninja": {
+        "male": "Ninja",
+        "female": "Ninja"
+    },
+    "samourai": {
+        "male": "Samouraï",
+        "female": "Samouraï"
+    },
+    "pirate": {
+        "male": "Pirate",
+        "female": "Pirate"
+    },
+    "healer": {
+        "male": "Healer",
+        "female": "Healer"
+    }
+}

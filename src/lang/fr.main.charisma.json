@@ -1,0 +1,18 @@
+{
+    "nopresence": {
+        "male": "Aucune présence",
+        "female": "Aucune présence"
+    },
+    "uncharismatic": {
+        "male": "Peu de charisme",
+        "female": "Peu de charisme"
+    },
+    "charismatic": {
+        "male": "Charismatique",
+        "female": "Charismatique"
+    },
+    "verycharismatic": {
+        "male": "Très charismatique",
+        "female": "Très charismatique"
+    }
+}
