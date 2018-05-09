@@ -8,8 +8,13 @@ export default class CharacterGenerator {
 
   generateCharacter () {
     const character = new Character()
+    character.setGender(this.generateGender())
     character.setMainValues(this.generateGenModuleValues(MAIN_GENERATOR_MODULE))
     return character
+  }
+
+  generateGender () {
+    return Math.random() >= 0.5 ? 'female' : 'male'
   }
 
   generateGenModuleValues (genModule) {

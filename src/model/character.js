@@ -10,6 +10,10 @@ export default class Character {
     this[MAIN_GENERATOR_MODULE] = {}
   }
 
+  setGender (gender) {
+    this.gender = gender
+  }
+
   setMainValues (mainValues) {
     this.setGeneratorModuleValues(MAIN_GENERATOR_MODULE, mainValues)
   }
@@ -31,6 +35,8 @@ export default class Character {
         }, {})
         obj[mod] = moduleObject
         return obj
-      }, {})
+      }, {
+        gender: this.gender
+      })
   }
 }
