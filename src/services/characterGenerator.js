@@ -1,10 +1,12 @@
 import Character from './../model/character'
 import { GENERATOR_CATEGORIES, MAIN_GENERATOR_MODULE, GENDERS, DEFAULT_GENDER, DEFAULT_LANG } from './../constants'
 import I18nManager from './i18nManager'
+import NameGenerator from './nameGenerator'
 
 export default class CharacterGenerator {
   constructor (contents, lang, presetValues) {
     this.i18nManager = new I18nManager()
+    this.nameGenerator = new NameGenerator()
     this.contents = contents || {}
     this.setLang(lang)
     this.managePresetValues(presetValues)
@@ -38,6 +40,9 @@ export default class CharacterGenerator {
 
     // Main Values
     character.setMainValues(this.generateGenModuleValues(MAIN_GENERATOR_MODULE))
+
+    // Generate name
+    character.setName(this.nameGenerator.generateName(character.civilization, character.gender))
 
     // Return final character
     return character

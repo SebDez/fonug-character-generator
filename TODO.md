@@ -1,7 +1,6 @@
 Todo list
 
-- Name generator
-- V1.0.0 : Fully Generate character main module
+- V1.0.0 : Fully Generate character main module + unit tests o:)
 - V1.1.0 : Allow options
 - V1.1.1 : Documentation for options
 - V2.0.0 : Allow custom providers

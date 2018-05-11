@@ -18,6 +18,10 @@ export default class Character {
     this.setGeneratorModuleValues(MAIN_GENERATOR_MODULE, mainValues)
   }
 
+  setName (name) {
+    this.name = name
+  }
+
   setGeneratorModuleValues (genModule, values) {
     const valuesClone = Object.assign({}, values)
     this[genModule] = {}
@@ -36,7 +40,8 @@ export default class Character {
         obj[mod] = moduleObject
         return obj
       }, {
-        gender: this.gender
+        gender: this.gender,
+        name: this.name
       })
   }
 }

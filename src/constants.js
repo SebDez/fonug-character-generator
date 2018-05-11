@@ -17,3 +17,9 @@ export const DEFAULT_TRANSLATION = null
 
 export const AVAILABLE_LANG = ['fr', 'en']
 export const AVAILABLE_GENDERS = [GENDERS.MALE, GENDERS.FEMALE]
+
+export const DEFAULT_KEY = 'default'
+
+export const NAME_BEGINNING_KEY = 'beginning'
+export const NAME_MIDDLE_KEY = 'middle'
+export const NAME_END_KEY = 'end'
