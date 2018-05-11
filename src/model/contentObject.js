@@ -25,6 +25,10 @@ export default class ContentObject {
     this.i18nFullKey = `${genModule}.${category}.${this.i18nKey}`
   }
 
+  getI18nFullKey () {
+    return this.i18nFullKey
+  }
+
   toJSON () {
     return {
       i18nKey: this.i18nKey,

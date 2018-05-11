@@ -1,20 +1,50 @@
 import Character from './../model/character'
-import { GENERATOR_CATEGORIES, MAIN_GENERATOR_MODULE } from './../constants'
+import { GENERATOR_CATEGORIES, MAIN_GENERATOR_MODULE, GENDERS, DEFAULT_GENDER, DEFAULT_LANG } from './../constants'
+import I18nManager from './i18nManager'
 
 export default class CharacterGenerator {
-  constructor (contents) {
+  constructor (contents, lang, presetValues) {
+    this.i18nManager = new I18nManager()
     this.contents = contents || {}
+    this.setLang(lang)
+    this.managePresetValues(presetValues)
+  }
+
+  setLang (lang) {
+    this.lang = lang || DEFAULT_LANG
+  }
+  setCharacterGender (characterGender) {
+    this.characterGender = characterGender || DEFAULT_GENDER
+  }
+  setPresetCharacterGender (characterGender) {
+    this.characterGenderIsPresetted = true
+    this.setCharacterGender(characterGender)
+  }
+
+  managePresetValues (presetValues) {
+    if (presetValues.gender) {
+      this.setPresetCharacterGender(presetValues.gender)
+    }
   }
 
   generateCharacter () {
     const character = new Character()
-    character.setGender(this.generateGender())
+
+    // Prepare gender
+    if (!this.characterGenderIsPresetted) {
+      this.setCharacterGender(this.generateGender())
+    }
+    character.setGender(this.characterGender)
+
+    // Main Values
     character.setMainValues(this.generateGenModuleValues(MAIN_GENERATOR_MODULE))
+
+    // Return final character
     return character
   }
 
   generateGender () {
-    return Math.random() >= 0.5 ? 'female' : 'male'
+    return Math.random() >= 0.5 ? GENDERS.FEMALE : GENDERS.MALE
   }
 
   generateGenModuleValues (genModule) {
@@ -44,11 +74,11 @@ export default class CharacterGenerator {
 
   prepareContentPicked (contentPicked, genModule, category) {
     contentPicked.setI18nFullKey(genModule, category)
-    contentPicked.setI18nValue(this.getContentI18nValue())
+    contentPicked.setI18nValue(this.getContentI18nValue(contentPicked.getI18nFullKey()))
     return contentPicked
   }
 
-  getContentI18nValue () {
-    return 'traduction !'
+  getContentI18nValue (fullKey) {
+    return this.i18nManager.translateKey(fullKey, this.characterGender, this.lang)
   }
 }

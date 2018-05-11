@@ -1,7 +1,5 @@
 Todo list
 
-- Manage gender
-- Translate default values
 - Name generator
 - V1.0.0 : Fully Generate character main module
 - V1.1.0 : Allow options

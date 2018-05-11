@@ -1,4 +1,4 @@
-# NPC (Non Playable Character) Generator
+# Fonug Character Generator (Non Playable Character Generator)
 
 ![Travis](https://travis-ci.org/SebDez/fonug-character-generator.svg?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
@@ -17,24 +17,57 @@ The character generated is very general with a view to be adapted to any world b
 ## Features
 
 * Generate a random character
+** With key translated in : french or english
+** With given gender : male or female
 
 ## Getting started
 
-```
-const NpcGenerator = require('./../npc-generator/lib/npc-generator')
+```javascript
+const FonugCharacterGenerator = require('.../fonug-character-generator')
 
 // Initialize the generator and content providers
-const generator = new NpcGenerator()
+const generator = new FonugCharacterGenerator(options)
 
 //Generate a random character into a JSON object
-const randomCharacter = generator.generateCharacter()
+const params = {
+    lang: 'en',
+    gender: 'male'
+}
+generator.generateCharacter(params).then(myRandomCharacter => {
+  console.log('Character generated !')
+  console.log(myRandomCharacter)
+}, error => {
+  console.log(error)
+})
 ```
 
 ## Parameters and options
 
+* Parameters for FonugCharacterGenerator (options)
+
 ```
-TODO
+
+Incoming
+
 ```
+
+* Parameters for generateCharacter method (params)
+
+You can generate a character with preset values.
+
+| Parameter     | Description         |
+| ------------- | ------------- |
+| lang          | The generated keys will be translated by default in french. To change this you can preset the lang between these values : fr or en |
+| gender        | You can preset the character gender between [male, female], or it will by randomly generated.      |
+
+## Errors
+
+| Error  | Description |
+| ------------- | ------------- |
+| FCG001  | A content file for element cannot be found, this should never happen now.  |
+| FCG002  | The "lang" you preset in params is not a valid one. |
+| FCG003  | The "gender" you preset in params is not a valid one. |
+
 
 ## Scripts
 
