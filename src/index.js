@@ -1,5 +1,5 @@
 import * as config from './../package.json'
-import { AVAILABLE_LANG, AVAILABLE_GENDERS } from './constants'
+import { AVAILABLE_LANG, AVAILABLE_GENDERS, DEFAULT_LANG } from './constants'
 import CharacterGenerator from './services/characterGenerator'
 import ContentProviderManager from './services/contentProviderManager'
 import ErrorObject from './model/errorObject'
@@ -31,7 +31,7 @@ export default class FonugCharacterGenerator {
     const character = generator.generateCharacter()
     return Object.assign({}, character.toJSON(), {
       version: this.version,
-      lang: options.lang
+      lang: options.lang || DEFAULT_LANG
     })
   }
 
