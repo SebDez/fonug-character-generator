@@ -1,4 +1,4 @@
-/* global describe, it, before, beforeEach, afterEach */
+/* global describe, it, before, beforeEach */
 
 import chai from 'chai'
 import CharacterGenerator from './../../src/services/characterGenerator'
