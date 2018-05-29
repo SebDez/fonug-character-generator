@@ -1,4 +1,4 @@
-import { DEFAULT_KEY, DEFAULT_GENDER, NAME_BEGINNING_KEY, NAME_MIDDLE_KEY, NAME_END_KEY } from './../constants'
+import { DEFAULT_KEY, DEFAULT_GENDER, NAME_BEGINNING_KEY, NAME_MIDDLE_KEY, NAME_END_KEY, GENDERS } from './../constants'
 import namesContent from './../content/names.json'
 
 export default class NameGenerator {
@@ -7,8 +7,8 @@ export default class NameGenerator {
   }
 
   generateName (charCiv, charGender) {
-    const civilization = this.namesContent[charCiv] || DEFAULT_KEY
-    const gender = charGender || DEFAULT_GENDER
+    const civilization = this.namesContent[charCiv] ? charCiv : DEFAULT_KEY
+    const gender = charGender && GENDERS[charGender.toUpperCase()] ? charGender : DEFAULT_GENDER
 
     // A name can have several words, at least 1
     const numberOfSubNames = this.namesContent[civilization].numberOfSubNames || this.namesContent[DEFAULT_KEY].numberOfSubNames
@@ -29,7 +29,8 @@ export default class NameGenerator {
   }
 
   getRandomSyllab (civilization, gender, namePosition) {
-    const syllabArray = this.namesContent[civilization][gender][namePosition]
+    const civNameContent = this.namesContent[civilization]
+    const syllabArray = civNameContent[gender] && civNameContent[gender][namePosition] ? civNameContent[gender][namePosition] : this.namesContent[DEFAULT_KEY][gender][namePosition]
     const index = Math.floor(Math.random() * syllabArray.length)
     return syllabArray[index]
   }

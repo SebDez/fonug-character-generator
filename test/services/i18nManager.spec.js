@@ -7,7 +7,7 @@ import I18nManager from './../../src/services/i18nManager'
 chai.expect()
 const expect = chai.expect
 
-describe('Content Provider Manager', () => {
+describe('I18nManager', () => {
   let i18nManager = null
 
   beforeEach(async () => {
