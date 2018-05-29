@@ -1,11 +1,10 @@
-/* global describe, it, before */
+/* global describe, it, before, afterEach */
 
 import chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'
 import sinon from 'sinon'
 import FonugCharacterGenerator from './../src/index'
 import Character from './../src/model/character'
-import ErrorObject from './../src/model/errorObject'
 import { AVAILABLE_GENDERS } from './../src/constants'
 
 chai.expect()

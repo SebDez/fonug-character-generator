@@ -9,7 +9,7 @@ export default class CharacterGenerator {
     this.nameGenerator = new NameGenerator()
     this.contents = contents || {}
     this.setLang(lang)
-    this.managePresetValues(presetValues)
+    this.managePresetValues({...presetValues})
   }
 
   setLang (lang) {
