@@ -52,8 +52,8 @@ describe('Character Generator', () => {
   describe('getContentI18nValue', () => {
     it('should return content i18n object', () => {
       const generator = new CharacterGenerator()
-      expect(generator.getContentI18nValue('main.age.old').male).to.equal('Vieux')
-      expect(generator.getContentI18nValue('main.age.old').female).to.equal('Vieille')
+      expect(generator.getContentI18nValue('main.age.old').male).to.equal('Old man')
+      expect(generator.getContentI18nValue('main.age.old').female).to.equal('Old woman')
     })
   })
 })

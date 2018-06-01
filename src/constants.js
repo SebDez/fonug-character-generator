@@ -11,7 +11,7 @@ export const GENDERS = {
 
 export const DEFAULT_GENDER = GENDERS.FEMALE
 
-export const DEFAULT_LANG = 'fr'
+export const DEFAULT_LANG = 'en'
 
 export const DEFAULT_TRANSLATION = null
 

@@ -57,7 +57,7 @@ You can generate a character with preset values.
 
 | Parameter     | Description         |
 | ------------- | ------------- |
-| lang          | The generated keys will be translated by default in french. To change this you can preset the lang between these values : fr or en |
+| lang          | The generated keys will be translated by default in english. To change this you can preset the lang between these values : fr or en |
 | gender        | You can preset the character gender between [male, female], or it will by randomly generated.      |
 
 ## Errors

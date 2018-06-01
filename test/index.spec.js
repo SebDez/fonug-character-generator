@@ -48,12 +48,12 @@ describe('NPC Generator', () => {
     })
 
     it('should return a character translated with default lang', () => {
-      expect(character.lang).to.equal('fr')
+      expect(character.lang).to.equal('en')
     })
 
     it('should return a character translated with given lang', async () => {
-      character = await generator.generateCharacter({lang: 'en'})
-      expect(character.lang).to.equal('en')
+      character = await generator.generateCharacter({lang: 'fr'})
+      expect(character.lang).to.equal('fr')
     })
 
     it('should throw error FCG002 if given lang option is unknown', () => {
