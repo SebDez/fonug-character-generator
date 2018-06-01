@@ -4,6 +4,13 @@ import I18nManager from './i18nManager'
 import NameGenerator from './nameGenerator'
 
 export default class CharacterGenerator {
+  /**
+   * A character generator should be instanciate with an objects of contents to be picked
+   * Then should can provide a default lang and preset values as gender
+   * @param {Object} contents The contents to be used by the generator
+   * @param {String} lang The lang wanted for i18n
+   * @param {Object} presetValues Preset values as gender
+   */
   constructor (contents, lang, presetValues) {
     this.i18nManager = new I18nManager()
     this.nameGenerator = new NameGenerator()

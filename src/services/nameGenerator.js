@@ -2,6 +2,9 @@ import { DEFAULT_KEY, DEFAULT_GENDER, NAME_BEGINNING_KEY, NAME_MIDDLE_KEY, NAME_
 import namesContent from './../content/names.json'
 
 export default class NameGenerator {
+  /**
+   * A name generator for characters
+   */
   constructor () {
     this.namesContent = namesContent
   }

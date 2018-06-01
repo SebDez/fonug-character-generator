@@ -10,18 +10,36 @@ export default class Character {
     this[MAIN_GENERATOR_MODULE] = {}
   }
 
+  /**
+   * Set the character gender
+   * @param {String} gender The gender to set
+   */
   setGender (gender) {
     this.gender = gender
   }
 
+  /**
+   * Set the character main values
+   * @param {Object} mainValues The main values to set
+   */
   setMainValues (mainValues) {
     this.setGeneratorModuleValues(MAIN_GENERATOR_MODULE, mainValues)
   }
 
+  /**
+   * Set the character name
+   * @param {String} name The name to set
+   */
   setName (name) {
     this.name = name
   }
 
+  /**
+   * Set character attributes for a module (main, etc.) from given values
+   * Each value must be a ContentObject
+   * @param {String} genModule The name of the module concerned
+   * @param {Object} values The values to set, each value must be a ContentObject
+   */
   setGeneratorModuleValues (genModule, values) {
     const valuesClone = Object.assign({}, values)
     this[genModule] = {}
@@ -30,6 +48,10 @@ export default class Character {
     }
   }
 
+  /**
+   * Returns he character to JSON format
+   * @returns The character to JSON format
+   */
   toJSON () {
     return Object.keys(GENERATOR_CATEGORIES)
       .reduce((obj, mod) => {

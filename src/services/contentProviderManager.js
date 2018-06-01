@@ -2,6 +2,11 @@ import { GENERATOR_CATEGORIES } from './../constants'
 import ContentProvider from './../model/contentProvider'
 
 export default class ContentProviderManager {
+  /**
+   * A content provider manager is used to defined what content provider should be used for a content
+   * By default, it will be the given contents provided in this lib.
+   * But you can also use your own providers
+   */
   constructor () {
     this.setContentProviders()
   }

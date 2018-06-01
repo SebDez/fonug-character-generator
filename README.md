@@ -68,6 +68,33 @@ You can generate a character with preset values.
 | FCG002  | The "lang" you preset in params is not a valid one. |
 | FCG003  | The "gender" you preset in params is not a valid one. |
 
+## How it works
+
+First you must instanciate a FonugCharacterGenerator with some providers.
+By default, we use some fixed providers in this lib, but you can provide your own providers.
+
+A ContentProvider is an element which will return an array of Content Objects.
+
+Each ContentObject is defined by :
+- i18nKey: an unique key to represent the content.
+- i18nFullKey: a more complete string to define the i18nkey and the module concerned, for example : main.age.child, says that the key is 'child' of the category 'age' of the 'main' module.
+- i18nValue: if the lang is available, this will be the translation for this key.
+- weight: the weight of a content object determine the chances to be picked during the generation, its value is from 0 et 1. For example, we want to randomly pick a value between BANANA (weight: 0.4) and TOMATO (weight: 0.6), the value will be picked randomly into a list of 4 BANANAS and 6 TOMATOES.
+- percentage: some values as the "fightSkills" are represented in percentage, which means that we can link the key to a value from 0 to 100.
+
+Therefrom, the FonugCharacterGenerator will fetch the contentValues for each modules accros content provider, and from theses values the character will be randomly generated.
+
+So you can (soon) passed your own ContentProvider if you want the data to be from everywhere you want.
+
+A given ContentProvider must be a function that return a Promise, and the values will not be translated in this generator.
+The promise should resolves an Array of Json objects which respect the format of a contentObject.
+
+In short :
+- You instanciate a FonugCharacterGenerator (eventually with your own providers)
+- You generate a character from that generator (eventually with options  as : lang, gender, or module choices)
+- You get a randomly generated character to JSON format.
+
+Enjoy !
 
 ## Scripts
 
