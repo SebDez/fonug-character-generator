@@ -32,7 +32,7 @@ describe('NPC Generator', () => {
     })
 
     it('should return an object', () => {
-      expect(character.version).to.not.be.an.instanceof(Object)
+      expect(character).to.be.an.instanceof(Object)
     })
 
     it('should not return a FonugCharacterGenerator', () => {
