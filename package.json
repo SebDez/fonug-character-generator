@@ -1,48 +1,57 @@
 {
   "name": "fonug-character-generator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A character generator",
   "main": "lib/library.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
     "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
+    "test": "mocha --require babel-polyfill --require babel-core/register --colors ./test/**/*.spec.js",
+    "test:watch": "mocha --require babel-polyfill --require babel-core/register --colors -w ./test/**/*.spec.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/SebDez/npc-generator"
   },
   "keywords": [
-    "webpack",
+    "fonug",
+    "character",
+    "generator",
+    "javascript",
     "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
+    "npc"
   ],
   "author": "Sébastien Dez",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.3",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "mocha": "^4.0.1",
     "webpack": "^3.10.0",
     "yargs": "^10.0.3"
   },
   "dependencies": {
+    "chai-as-promised": "^7.1.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "sinon": "^5.0.10"
   }
 }

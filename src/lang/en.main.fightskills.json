@@ -1,0 +1,18 @@
+{
+    "inexperienced": {
+        "male": "Inexperienced",
+        "female": "Inexperienced"
+    },
+    "noob": {
+        "male": "Noob",
+        "female": "Noob"
+    },
+    "experimented": {
+        "male": "Experimented",
+        "female": "Experimented"
+    },
+    "excellent": {
+        "male": "Excellent",
+        "female": "Excellent"
+    }
+}

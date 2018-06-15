@@ -1,0 +1,29 @@
+[
+    {
+        "i18nKey": "lawfulgood"
+    },
+    {
+        "i18nKey": "neutralgood"
+    },
+    {
+        "i18nKey": "chaoticgood"
+    },
+    {
+        "i18nKey": "lawfulneutral"
+    },
+    {
+        "i18nKey": "trueneutral"
+    },
+    {
+        "i18nKey": "chaoticneutral"
+    },
+    {
+        "i18nKey": "lawfulevil"
+    },
+    {
+        "i18nKey": "neutralevil"
+    },
+    {
+        "i18nKey": "chaoticevil"
+    }
+]

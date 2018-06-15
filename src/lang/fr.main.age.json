@@ -1,0 +1,26 @@
+{
+    "child": {
+        "female": "Enfant",
+        "male": "Enfant"
+    },
+    "adolescent": {
+        "female": "Adolescente",
+        "male": "Adolescent"
+    },
+    "youngadult": {
+        "female": "Jeune adulte",
+        "male": "Jeune adulte"
+    },
+    "adult": {
+        "female": "Adulte",
+        "male": "Adulte"
+    },
+    "old": {
+        "female": "Vieille",
+        "male": "Vieux"
+    },
+    "veryold": {
+        "female": "Très vieille",
+        "male": "Très vieux"
+    }
+}

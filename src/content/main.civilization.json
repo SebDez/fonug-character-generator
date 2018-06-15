@@ -1,0 +1,137 @@
+[
+    {
+        "i18nKey": "human"
+    },
+    {
+        "i18nKey": "dwarf"
+    },
+    {
+        "i18nKey": "elf"
+    },
+    {
+        "i18nKey": "duergar"
+    },
+    {
+        "i18nKey": "drow"
+    },
+    {
+        "i18nKey": "woodelves"
+    },
+    {
+        "i18nKey": "khajiit"
+    },
+    {
+        "i18nKey": "orc"
+    },
+    {
+        "i18nKey": "goblin"
+    },
+    {
+        "i18nKey": "urukhai"
+    },
+    {
+        "i18nKey": "lizardmen"
+    },
+    {
+        "i18nKey": "gnome"
+    },
+    {
+        "i18nKey": "hobbit"
+    },
+    {
+        "i18nKey": "halfling"
+    },
+    {
+        "i18nKey": "troll"
+    },
+    {
+        "i18nKey": "ogre"
+    },
+    {
+        "i18nKey": "giant"
+    },
+    {
+        "i18nKey": "ghost"
+    },
+    {
+        "i18nKey": "daemon"
+    },
+    {
+        "i18nKey": "angel"
+    },
+    {
+        "i18nKey": "fairy"
+    },
+    {
+        "i18nKey": "ent"
+    },
+    {
+        "i18nKey": "sylvari"
+    },
+    {
+        "i18nKey": "beastmen"
+    },
+    {
+        "i18nKey": "lycan"
+    },
+    {
+        "i18nKey": "vampire"
+    },
+    {
+        "i18nKey": "gargoyle"
+    },
+    {
+        "i18nKey": "qunari"
+    },
+    {
+        "i18nKey": "skaven"
+    },
+    {
+        "i18nKey": "amphibian"
+    },
+    {
+        "i18nKey": "minotaur"
+    },
+    {
+        "i18nKey": "centaur"
+    },
+    {
+        "i18nKey": "djinn"
+    },
+    {
+        "i18nKey": "dryad"
+    },
+    {
+        "i18nKey": "dragonborn"
+    },
+    {
+        "i18nKey": "faun"
+    },
+    {
+        "i18nKey": "ghoul"
+    },
+    {
+        "i18nKey": "minoboar"
+    },
+    {
+        "i18nKey": "siren"
+    },
+    {
+        "i18nKey": "naga"
+    },
+    {
+        "i18nKey": "mermaid"
+    },
+    {
+        "i18nKey": "halfinsect"
+    },
+    {
+        "i18nKey": "golem"
+    },
+    {
+        "i18nKey": "goauld"
+    },
+    {
+        "i18nKey": "cyclop"
+    }
+]

@@ -1,0 +1,18 @@
+{
+    "inattentive": {
+        "male": "Absent",
+        "female": "Absente"
+    },
+    "unobservant": {
+        "male": "Distrait",
+        "female": "Distraite"
+    },
+    "attentive": {
+        "male": "Attentif",
+        "female": "Attentive"
+    },
+    "veryattentive": {
+        "male": "Très attentif",
+        "female": "Très attentive"
+    }
+}

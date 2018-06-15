@@ -1,0 +1,62 @@
+[
+    {
+        "i18nKey": "barbarian"
+    },
+    {
+        "i18nKey": "bard"
+    },
+    {
+        "i18nKey": "druid"
+    },
+    {
+        "i18nKey": "witcher"
+    },
+    {
+        "i18nKey": "warrior"
+    },
+    {
+        "i18nKey": "magician"
+    },
+    {
+        "i18nKey": "monk"
+    },
+    {
+        "i18nKey": "paladin"
+    },
+    {
+        "i18nKey": "priest"
+    },
+    {
+        "i18nKey": "tramp"
+    },
+    {
+        "i18nKey": "necromancer"
+    },
+    {
+        "i18nKey": "alchemist"
+    },
+    {
+        "i18nKey": "knight"
+    },
+    {
+        "i18nKey": "soothsayer"
+    },
+    {
+        "i18nKey": "witch"
+    },
+    {
+        "i18nKey": "ninja"
+    },
+    {
+        "i18nKey": "samourai"
+    },
+    {
+        "i18nKey": "pirate"
+    },
+    {
+        "i18nKey": "ninja"
+    },
+    {
+        "i18nKey": "healer"
+    }
+]

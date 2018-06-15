@@ -1,0 +1,18 @@
+{
+    "stupid": {
+        "male": "Stupide",
+        "female": "Stupide"
+    },
+    "prettystupid": {
+        "male": "Plutôt bête",
+        "female": "Plutôt bête"
+    },
+    "prettysmart": {
+        "male": "Malin",
+        "female": "Maline"
+    },
+    "verysmart": {
+        "male": "Très intelligent",
+        "female": "Très intelligente"
+    }
+}

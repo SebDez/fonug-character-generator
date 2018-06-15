@@ -1,5 +1,8 @@
 import * as config from './../package.json'
-import Character from './../src/character'
+import { AVAILABLE_LANG, AVAILABLE_GENDERS, DEFAULT_LANG } from './constants'
+import CharacterGenerator from './services/characterGenerator'
+import ContentProviderManager from './services/contentProviderManager'
+import ErrorObject from './model/errorObject'
 
 /**
  * The class defining the character generator
@@ -11,6 +14,7 @@ import Character from './../src/character'
 export default class FonugCharacterGenerator {
   constructor () {
     this.version = config.version
+    this.contentProviderManager = new ContentProviderManager()
   }
 
   /**
@@ -18,11 +22,34 @@ export default class FonugCharacterGenerator {
    * @returns Object The character generated
    * @memberof FonugGenerator
    */
-  generateCharacter () {
-    const character = new Character()
-
-    return Object.assign({}, character, {
-      version: this.version
+  async generateCharacter (params) {
+    const paramsClone = Object.assign({}, params)
+    this.checkCharacterGeneratorParams(paramsClone)
+    const options = this.buildOptionsFromParams(paramsClone)
+    const generatorContent = await this.contentProviderManager.getGeneratorContent()
+    const generator = new CharacterGenerator(generatorContent, options.lang, { gender: options.gender })
+    const character = generator.generateCharacter()
+    return Object.assign({}, character.toJSON(), {
+      version: this.version,
+      lang: options.lang || DEFAULT_LANG
     })
+  }
+
+  buildOptionsFromParams (options) {
+    return {
+      lang: options.lang,
+      gender: options.gender
+    }
+  }
+
+  checkCharacterGeneratorParams (params) {
+    // Lang
+    if (params.lang && AVAILABLE_LANG.indexOf(params.lang) === -1) {
+      throw new ErrorObject('FCG002', `FONUG-CHARACTER-GENERATOR : 0002 : The lang "${params.lang}" is not available.`)
+    }
+    // Gender
+    if (params.gender && AVAILABLE_GENDERS.indexOf(params.gender) === -1) {
+      throw new ErrorObject('FCG003', `FONUG-CHARACTER-GENERATOR : 0003 : The gender "${params.gender}" is not available.`)
+    }
   }
 }
