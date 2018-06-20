@@ -12,9 +12,9 @@ import ErrorObject from './model/errorObject'
  * @class FonugGenerator
  */
 export default class FonugCharacterGenerator {
-  constructor () {
+  constructor ({providers} = {}) {
     this.version = config.version
-    this.contentProviderManager = new ContentProviderManager()
+    this.contentProviderManager = new ContentProviderManager(providers)
   }
 
   /**

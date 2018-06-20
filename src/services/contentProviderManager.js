@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { GENERATOR_CATEGORIES } from './../constants'
 import ContentProvider from './../model/contentProvider'
 
@@ -7,16 +8,18 @@ export default class ContentProviderManager {
    * By default, it will be the given contents provided in this lib.
    * But you can also use your own providers
    */
-  constructor () {
-    this.setContentProviders()
+  constructor (providers) {
+    this.setContentProviders(providers)
   }
 
-  setContentProviders () {
+  setContentProviders (givenProviders = {}) {
     this.contentProviders = {}
     for (const genModule of Object.keys(GENERATOR_CATEGORIES)) {
       for (const category of GENERATOR_CATEGORIES[genModule]) {
         const providerName = `${genModule}.${category}`
-        this.contentProviders[providerName] = new ContentProvider(providerName)
+        // Set custom provider given in params or set it to null
+        const customProvider = _.isFunction(givenProviders[providerName]) ? givenProviders[providerName] : null
+        this.contentProviders[providerName] = new ContentProvider(providerName, customProvider)
       }
     }
   }

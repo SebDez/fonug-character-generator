@@ -26,7 +26,7 @@ The character generated is very general with a view to be adapted to any world b
 const FonugCharacterGenerator = require('.../fonug-character-generator')
 
 // Initialize the generator and content providers
-const generator = new FonugCharacterGenerator(options)
+const generator = new FonugCharacterGenerator()
 
 //Generate a random character into a JSON object
 const params = {
@@ -40,6 +40,23 @@ generator.generateCharacter(params).then(myRandomCharacter => {
   console.log(error)
 })
 ```
+
+* Shortest Way (default values and content providers)
+```javascript
+const FonugCharacterGenerator = require('.../fonug-character-generator')
+
+// Initialize the generator and content providers
+const generator = new FonugCharacterGenerator()
+
+//Generate a random character into a JSON object
+const character = await generator.generateCharacter()
+```
+
+* With Custom providers
+```javascript
+//INCOMING
+```
+
 
 ## Parameters and options
 
