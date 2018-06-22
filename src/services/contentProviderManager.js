@@ -14,11 +14,19 @@ export default class ContentProviderManager {
 
   setContentProviders (givenProviders = {}) {
     this.contentProviders = {}
+
+    // Clear custom providers
+    const cleanedProvider = {}
+    Object.keys(givenProviders).forEach(key => {
+      cleanedProvider[key.toLowerCase()] = givenProviders[key]
+    })
+
+    // Define content providers
     for (const genModule of Object.keys(GENERATOR_CATEGORIES)) {
       for (const category of GENERATOR_CATEGORIES[genModule]) {
-        const providerName = `${genModule}.${category}`
+        const providerName = `${genModule}.${category}`.toLowerCase()
         // Set custom provider given in params or set it to null
-        const customProvider = _.isFunction(givenProviders[providerName]) ? givenProviders[providerName] : null
+        const customProvider = _.isFunction(cleanedProvider[providerName]) ? cleanedProvider[providerName] : null
         this.contentProviders[providerName] = new ContentProvider(providerName, customProvider)
       }
     }
@@ -29,7 +37,7 @@ export default class ContentProviderManager {
     for (const genModule of Object.keys(GENERATOR_CATEGORIES)) {
       generatorContent[genModule] = {}
       for (const category of GENERATOR_CATEGORIES[genModule]) {
-        const providerName = `${genModule}.${category}`
+        const providerName = `${genModule}.${category}`.toLowerCase()
         generatorContent[genModule][category] = await this.contentProviders[providerName].getContent()
       }
     }

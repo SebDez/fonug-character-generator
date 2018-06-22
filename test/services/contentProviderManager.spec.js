@@ -49,8 +49,8 @@ describe('Content Provider Manager', () => {
       expect(cpManager.contentProviders['main.civilization'].customProvider).to.be.null
     })
     it('should NOT set my custom provider if it is not a function', () => {
-      expect(cpManager.contentProviders['main.charClass'].customProvider).not.to.be.an.instanceOf(Function)
-      expect(cpManager.contentProviders['main.charClass'].customProvider).to.be.null
+      expect(cpManager.contentProviders['main.charclass'].customProvider).not.to.be.an.instanceOf(Function)
+      expect(cpManager.contentProviders['main.charclass'].customProvider).to.be.null
     })
   })
 })

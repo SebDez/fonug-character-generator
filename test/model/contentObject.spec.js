@@ -55,4 +55,70 @@ describe('ContentObject model', () => {
       expect(jsonResult.percentage).to.equal('my-percentage')
     })
   })
+  describe('isValid', () => {
+    it('should be valid, default case', () => {
+      const params = {i18nKey: 'mykey', weight: 0.5, percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(true)
+    })
+
+    it('should be valid, default minor cases', () => {
+      const params = {i18nKey: 'mykey', weight: 0, percentage: 0}
+      expect(ContentObject.isValid(params)).to.equal(true)
+    })
+
+    it('should be valid, default major cases', () => {
+      const params = {i18nKey: 'mykey', weight: 1, percentage: 100}
+      expect(ContentObject.isValid(params)).to.equal(true)
+    })
+
+    it('should be invalid if no params are given', () => {
+      const params = void (0)
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if params is empty', () => {
+      const params = {}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if there is no i18nkey', () => {
+      const params = {weight: 0.5, percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if ii18nkey is invalid', () => {
+      const params = {i18nKey: 42, weight: 0.5, percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if weight is invalid', () => {
+      const params = {i18nKey: 'mykey', weight: '0.5', percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if weight is under 0', () => {
+      const params = {i18nKey: 'mykey', weight: -1, percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if weight is over 1', () => {
+      const params = {i18nKey: 'mykey', weight: 2, percentage: 70}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if percentage is invalid', () => {
+      const params = {i18nKey: 'mykey', weight: 0.5, percentage: '70'}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if percentage is under 0', () => {
+      const params = {i18nKey: 'mykey', weight: 0.5, percentage: -1}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+
+    it('should be invalid if percentage is over 100', () => {
+      const params = {i18nKey: 'mykey', weight: 0.5, percentage: 101}
+      expect(ContentObject.isValid(params)).to.equal(false)
+    })
+  })
 })
