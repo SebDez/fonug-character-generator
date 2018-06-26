@@ -54,7 +54,19 @@ const character = await generator.generateCharacter()
 
 * With Custom providers
 ```javascript
-//INCOMING
+const FonugCharacterGenerator = require('.../fonug-character-generator')
+
+const myProviders = {
+  'main.age': () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}]),
+  'main.civilization': () => Promise.resolve([{i18nKey: 'totallyCustomCiv'}]),
+  'main.fightSkills': () => Promise.resolve([{i18nKey: 'totallyCustomFS', weight: 1}]),
+}
+
+// Initialize the generator and content providers
+const generator = new FonugCharacterGenerator(myProviders)
+
+//Generate a random character into a JSON object
+const character = await generator.generateCharacter()
 ```
 
 
@@ -62,11 +74,33 @@ const character = await generator.generateCharacter()
 
 * Parameters for FonugCharacterGenerator (options)
 
+You can provide your own custom providers for content.
+
+The custom provider parameter is an object whose each key is a provider name and its value a function which resolve an array of valid content Object.
+
+> Structure of a custom provider name
+
+It should respect this format :
+
 ```
 
-Incoming
+'module.category'
 
 ```
+
+And these are the current available values :
+
+| Module  | Categories |
+| ------------- | ------------- |
+| main  | ['age', 'civilization', 'charClass', 'alignment', 'punchline', 'charisma', 'beauty', 'intellect', 'perception', 'fightskills']  |
+
+> Structure of a content object
+| Attribute     | Description         |
+| ------------- | ------------- |
+| i18nKey           | REQUIRED. String. The unique key for this content. |
+| weight            | OPTIONAL. Float. From 0 to 1. It represents the chances to be picked while generating, default is 0.1.   |
+| percentage        | OPTIONAL. Number. From 0 to 100. Used to represent content in percentage.     |
+
 
 * Parameters for generateCharacter method (params)
 
@@ -84,6 +118,10 @@ You can generate a character with preset values.
 | FCG001  | A content file for element cannot be found, this should never happen now.  |
 | FCG002  | The "lang" you preset in params is not a valid one. |
 | FCG003  | The "gender" you preset in params is not a valid one. |
+| FCG004  | The custom provider is not a Promise. |
+| FCG005  | The custom provider does not resolve an array. |
+| FCG006  | The custom provider response contains a non object element. |
+| FCG007  | One element of the custome provider is not a valid ContentObject. |
 
 ## How it works
 
@@ -101,7 +139,7 @@ Each ContentObject is defined by :
 
 Therefrom, the FonugCharacterGenerator will fetch the contentValues for each modules accros content provider, and from theses values the character will be randomly generated.
 
-So you can (soon) passed your own ContentProvider if you want the data to be from everywhere you want.
+So you can pass your own ContentProvider if you want the data to be from everywhere you want.
 
 A given ContentProvider must be a function that return a Promise, and the values will not be translated in this generator.
 The promise should resolves an Array of Json objects which respect the format of a contentObject.
