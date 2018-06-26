@@ -1,6 +1,6 @@
 {
   "name": "fonug-character-generator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A character generator",
   "main": "lib/library.js",
   "scripts": {

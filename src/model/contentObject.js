@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 /**
  * A class representing a content Object
  * i18nKey : The key that will be used to manage i18n values
@@ -36,5 +38,12 @@ export default class ContentObject {
       i18nValue: this.i18nValue,
       percentage: this.percentage
     }
+  }
+
+  static isValid ({ i18nKey, weight, percentage } = {}) {
+    const isI18nValid = !!i18nKey && _.isString(i18nKey)
+    const isWeightValid = _.isNil(percentage) || (_.isNumber(weight) && weight >= 0 && weight <= 1)
+    const isPercentageValid = _.isNil(percentage) || (_.isNumber(percentage) && percentage >= 0 && percentage <= 100)
+    return isI18nValid && isWeightValid && isPercentageValid
   }
 }

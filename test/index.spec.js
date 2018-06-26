@@ -47,6 +47,10 @@ describe('NPC Generator', () => {
       expect(character.version).to.match(/^(\d+\.)?(\d+\.)?(\*|\d+)$/)
     })
 
+    it('should not be declared as using customProviders', () => {
+      expect(character.customProviders).to.equal(false)
+    })
+
     it('should return a character translated with default lang', () => {
       expect(character.lang).to.equal('en')
     })
@@ -76,6 +80,60 @@ describe('NPC Generator', () => {
     it('should reject an error if contentProviderManager has an problem with a provider', () => {
       mockContentProviderManager.expects('getGeneratorContent').rejects(new Error('FCG001'))
       return generator.generateCharacter().should.be.rejectedWith('FCG001')
+    })
+  })
+
+  describe('generateCharacter with custom providers', () => {
+    let character
+    before(async () => {
+      const customProviders = {
+        'main.age': () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}]),
+        'main.civilization': () => Promise.resolve([{i18nKey: 'totallyCustomCiv', weight: 0}]),
+        'main.fightSkills': () => Promise.resolve([{i18nKey: 'totallyCustomFS', weight: 1, percentage: 42}]),
+        'MAIN.CHARCLASS': () => Promise.resolve([{i18nKey: 'totallyCustomCharClass', weight: 1}])
+      }
+      const generatorWithCustomProvider = new FonugCharacterGenerator(customProviders)
+      character = await generatorWithCustomProvider.generateCharacter()
+    })
+
+    it('should return an object', () => {
+      expect(character).to.be.an.instanceof(Object)
+    })
+
+    it('should be declared as using customProviders', () => {
+      expect(character.customProviders).to.equal(true)
+    })
+
+    it('should return a character with age from custom provider', () => {
+      expect(character.main.age.i18nFullKey).to.equal('main.age.totallyCustomAge')
+    })
+
+    it('should return a character with no civilization', () => {
+      expect(character.main.civilization.i18nFullKey).to.equal('main.civilization.totallyCustomCiv')
+    })
+
+    it('should return a character with fightskills percentage from custom provider', () => {
+      expect(character.main.fightskills.percentage).to.equal(42)
+    })
+
+    it('should return a character with charClass from CAPS custom provider', () => {
+      expect(character.main.charClass.i18nFullKey).to.equal('main.charClass.totallyCustomCharClass')
+    })
+
+    it('should no throw even if with invalid providers name', async () => {
+      const invalidCustomProvider = {
+        42: () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}]),
+        true: () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}]),
+        '.main.ft.d': () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}]),
+        'main.invalidprovider': () => Promise.resolve([{i18nKey: 'totallyCustomAge', weight: 1, percentage: 70}])
+      }
+      let error = null
+      try {
+        await new FonugCharacterGenerator(invalidCustomProvider).generateCharacter()
+      } catch (e) {
+        error = e
+      }
+      expect(error).to.equal(null)
     })
   })
 })
